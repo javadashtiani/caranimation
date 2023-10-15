@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.box {
+  background-image: url("images/box.png");
+  width: 100%;
+  height: 100vh;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.road {
+  width: 400%;
+  height: 150px;
+  background-image: url("images/road.png");
+  background-repeat: repeat-x;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.road-animation {
+  animation: moveRoad linear 5s infinite;
+}
+@keyframes moveRoad {
+  100% {
+    transform: translateX(-2200px);
+  }
+}
+.car {
+  position: absolute;
+  bottom: 0;
+  background-repeat: none;
+  left: 24%;
+}
+.car-animation {
+  animation: moveCar 2s infinite linear;
+}
+@keyframes moveCar {
+  0% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+
